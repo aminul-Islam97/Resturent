@@ -1,0 +1,20 @@
+.ok{
+    opacity: 0;
+  animation: fadeIn 0.8s ease-in-out 0.3s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px); /* optional slight slide-up */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.our-story {
+  animation: fadeIn 0.8s ease-in-out 0.3s forwards;
+  opacity: 0; /* Start hidden */
+}

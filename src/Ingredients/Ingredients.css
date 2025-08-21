@@ -1,0 +1,175 @@
+.ingredients-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: #2b2f32; 
+  padding: 40px;
+  border-radius: 10px;
+  gap: 30px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-in-out 0.3s, transform 0.8s ease-in-out 0.3s, background 0.4s ease;
+}
+
+/* When visible */
+.ingredients-section.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover effect for container */
+.ingredients-section:hover {
+  background: #32353a; 
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  transform: translateY(-5px);
+}
+
+/* --- Content Styling --- */
+.ingredients-content {
+  flex: 1;
+  color: #fff;
+  background: #2b2f32 url("./Group\ 459.png") no-repeat center center;
+  background-size: cover;
+  padding: 20px;
+  border-radius: 8px;
+  transition: transform 0.4s ease;
+}
+
+.ingredients-content:hover {
+  transform: scale(1.02);
+}
+
+.ingredients-content h4 {
+  color: #e63946; 
+  margin-bottom: 10px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fadeSlide 0.8s ease forwards 0.3s;
+}
+
+.ingredients-content h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fadeSlide 0.8s ease forwards 0.5s;
+}
+
+.ingredients-content p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeSlideUp 0.8s ease forwards 0.7s;
+}
+
+/* --- Button --- */
+.menu-btn {
+  background: #e63946;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s ease;
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards 1s;
+}
+
+.menu-btn:hover {
+  background: #c72635;
+  transform: scale(1.05);
+}
+
+/* --- Image Animation --- */
+.ingredients-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards 1.2s;
+}
+
+.ingredients-image img {
+  max-width: 100%;
+  border-radius: 8px;
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+.ingredients-image img:hover {
+  transform: scale(1.05) rotate(1deg);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+/* --- Animations --- */
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(-15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* --- Responsive --- */
+@media (max-width: 992px) {
+  .ingredients-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .ingredients-content {
+    background-position: top center;
+    padding: 20px;
+  }
+
+  .ingredients-image {
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .ingredients-content h2 {
+    font-size: 24px;
+  }
+
+  .ingredients-content p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .ingredients-section {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .ingredients-content h2 {
+    font-size: 20px;
+  }
+
+  .ingredients-content p {
+    font-size: 13px;
+  }
+
+  .menu-btn {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .ingredients-image img {
+    width: 100%;
+    height: auto;
+  }
+}

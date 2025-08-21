@@ -1,0 +1,119 @@
+.menu-section {
+  background: #2b2f32;
+  color: #fff;
+  padding: 60px 20px;
+  border-radius: 10px;
+  max-width: 1100px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.menu-header h4 {
+  color: #e63946;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.menu-header h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.menu-header p {
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px 40px;
+}
+
+.menu-item {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.menu-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+}
+
+.menu-item h3 {
+  color: #e63946;
+  margin-bottom: 5px;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.menu-item:hover h3 {
+  color: #ff4d5a;
+}
+
+.menu-item p {
+  font-size: 14px;
+  color: #ddd;
+  transition: color 0.3s;
+}
+
+.menu-item:hover p {
+  color: #fff;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.menu-item:hover .price {
+  color: #ffcc00;
+}
+
+.menu-footer {
+  margin-top: 30px;
+}
+
+.menu-btn {
+  background: #e63946;
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.menu-btn:hover {
+  background: #c72635;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+  .menu-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  .price {
+    margin-top: 10px;
+  }
+}

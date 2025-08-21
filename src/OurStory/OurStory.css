@@ -1,0 +1,140 @@
+.our-story {
+  background: #2b2d32;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  animation: fadeIn 0.8s ease-in-out 0.2s forwards;
+  opacity: 0;
+  transition: background 0.4s ease;
+}
+
+.our-story:hover {
+  background: #32343a; 
+}
+
+/* --- Header Animations --- */
+.story-header h4 {
+  color: #e5097f;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: slideDown 0.8s ease forwards 0.4s;
+}
+
+.story-header h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: slideDown 0.8s ease forwards 0.6s;
+}
+
+.story-header p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 15px;
+  color: #ccc;
+  line-height: 1.6;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 1s ease forwards 0.8s;
+}
+
+/* --- Gallery --- */
+.story-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px 0;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards 1s;
+}
+
+.slider {
+  position: relative;
+  max-width: 400px;
+}
+
+.slider img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards 1.2s;
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+.slider img:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
+/* --- Dots --- */
+.dots {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dot.active,
+.dot:hover {
+  opacity: 1;
+  background: #e5097f;
+  transform: scale(1.3);
+}
+
+/* --- Signature --- */
+.signature {
+  margin-top: 40px;
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards 1.5s;
+}
+
+.signature h4 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.signature .sign {
+  color: #e5097f;
+  font-family: "Brush Script MT", cursive;
+  font-size: 22px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.signature .sign:hover {
+  color: #fff;
+  transform: rotate(-3deg) scale(1.1);
+}
+
+/* --- Animations --- */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
